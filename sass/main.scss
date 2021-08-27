@@ -1,0 +1,108 @@
+.main {
+  max-width: 1411px;
+  margin: 0 auto;
+  margin-top: 231px;
+  position: relative;
+  z-index: 10;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 705px;
+    height: 515px;
+    background-image: url("../img/main_circuit.png");
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background-image: url("../img/main_circuit@2x.png");
+      background-size: contain;
+    }
+
+    top: -65px;
+    right: -90px;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 670px;
+    height: 641px;
+    background-image: url("../img/main_triangulars.png");
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background-image: url("../img/main_triangulars@2x.png");
+      background-size: contain;
+    }
+
+    top: -200px;
+    right: -45px;
+    z-index: -2;
+  }
+
+
+  h1 {
+    font-family: $custom-font-roboto;
+    font-weight: 700;
+    font-size: 80px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $basic-white;
+    margin: 0;
+    margin-bottom: 31px;
+  }
+
+  p {
+    font-family: $custom-font-pt;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+    color: $basic-white;
+    width: 683px;
+    padding-left: 94px;
+    position: relative;
+    margin: 0;
+    margin-bottom: 37px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 66px;
+      height: 2px;
+      background-color: $basic-white;
+      left: 0;
+      top: 14px;
+    }
+  }
+}
+
+.main__btn-consult {
+  width: 407px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-blue;
+  border-radius: 5px;
+  font-family: $custom-font-roboto;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-white;
+  margin-left: 94px;
+  margin-bottom: 93px;
+}
+
+.main__down {
+  font-family: $custom-font-pt;
+  font-weight: 400;
+  font-size: 14px;
+  color: $basic-white;
+  text-decoration: none;
+  opacity: 0.5;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  margin-bottom: 92px;
+}

@@ -1,6 +1,14 @@
 .header {
   background-color: $dark-blue;
   padding-top: 33px;
+  background-image: url("../img/main_bg.png");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url("../img/main_bg@2x.png");
+    background-size: contain;
+  }
 
   @media (max-width: $tablet-width) {
     padding-left: 25px;
