@@ -1,0 +1,16 @@
+.header {
+  background-color: $dark-blue;
+  padding-top: 33px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 21px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 17px;
+    padding-right: 15px;
+    padding-top: 17px;
+  }
+}
