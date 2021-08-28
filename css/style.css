@@ -73,16 +73,16 @@ body {
 }
 @media (max-width: 1023px) {
   .header {
-    padding-left: 25px;
-    padding-right: 25px;
     padding-top: 21px;
+    background-size: cover, 465px, 501px;
+    background-position: 0 0, 500px 113px, 165% -50px;
   }
 }
 @media (max-width: 767px) {
   .header {
-    padding-left: 17px;
-    padding-right: 15px;
     padding-top: 17px;
+    background-size: cover, 301px, 480px;
+    background-position: 0 0, 26px 92px, 150px -40px;
   }
 }
 
@@ -93,6 +93,18 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (max-width: 1023px) {
+  .header-top {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .header-top {
+    padding-left: 17px;
+    padding-right: 15px;
+  }
 }
 
 .header-top__logo {
@@ -220,6 +232,21 @@ body {
   z-index: 10;
   padding-left: 15px;
 }
+@media (max-width: 1023px) {
+  .main {
+    margin-top: 116px;
+    padding-bottom: 158px;
+    padding-left: 88px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .main {
+    margin-top: 231px;
+    padding-left: 0;
+    padding-bottom: 70px;
+  }
+}
 .main h1 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -230,6 +257,21 @@ body {
   margin: 0;
   margin-bottom: 31px;
   text-shadow: 1px 0 1px #1b2931, 0 1px 1px #1b2931, -1px 0 1px #1b2931, 0 -1px 1px #1b2931;
+}
+@media (max-width: 1023px) {
+  .main h1 {
+    font-size: 60px;
+    width: 333px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .main h1 {
+    width: 277px;
+    font-size: 40px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 }
 .main p {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -253,6 +295,27 @@ body {
   left: 0;
   top: 14px;
 }
+@media (max-width: 1023px) {
+  .main p {
+    font-size: 18px;
+    line-height: 28px;
+    width: 356px;
+    padding-left: 48px;
+  }
+  .main p::before {
+    width: 33px;
+    height: 2px;
+  }
+}
+@media (max-width: 767px) {
+  .main p {
+    font-size: 16px;
+    width: 245px;
+    padding-left: 48px;
+    margin: 0 auto;
+    margin-bottom: 42px;
+  }
+}
 
 .main__btn-consult {
   width: 407px;
@@ -271,6 +334,29 @@ body {
   margin-left: 94px;
   margin-bottom: 93px;
 }
+@media (max-width: 1023px) {
+  .main__btn-consult {
+    width: 379px;
+    margin-left: 48px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .main__btn-consult {
+    display: none;
+  }
+}
+
+.main__btn-consult--mobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  .main__btn-consult--mobile {
+    display: flex;
+    width: 287px;
+    margin: 0 auto;
+  }
+}
 
 .main__down {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -283,4 +369,9 @@ body {
       writing-mode: tb-rl;
   transform: rotate(-180deg);
   margin-bottom: 92px;
+}
+@media (max-width: 1023px) {
+  .main__down {
+    display: none;
+  }
 }
