@@ -3,6 +3,8 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const svgstore = require("gulp-svgstore");
+const rename = require("gulp-rename");
 
 gulp.task('sass', function() {
   return gulp.src("sass/style.scss")
@@ -29,3 +31,14 @@ gulp.task('server', gulp.series('sass', function() {
 
 
 gulp.task('default', gulp.series('server'));
+
+//Sprites
+
+const sprite = () => {
+  return gulp.src("img/icon_*.svg")
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("img"));
+}
+
+exports.sprite = sprite;

@@ -1,13 +1,14 @@
 .header {
   background-color: $dark-blue;
   padding-top: 33px;
-  background-image: url("../img/main_bg.png");
-  background-repeat: no-repeat;
+  background-image: url("../img/main_bg.png"), url("../img/main_circuit.png"), url("../img/main_triangulars.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 0 0, 87% 254px, 83.5% 118px;
 
   @media (min-resolution: 144dpi),
   (min-resolution: 1.5dppx) {
-    background-image: url("../img/main_bg@2x.png");
-    background-size: contain;
+    background-image: url("../img/main_bg@2x.png"), url("../img/main_circuit@2x.png"), url("../img/main_triangulars@2x.png");
+    background-size: contain, 705px, 670px;
   }
 
   @media (max-width: $tablet-width) {
