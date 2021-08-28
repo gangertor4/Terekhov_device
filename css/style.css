@@ -553,3 +553,98 @@ body {
 .benefits__card--price:hover::before {
   background-image: url("../img/icon_price_white.svg");
 }
+
+.about {
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 110px;
+  padding-bottom: 110px;
+  background-image: url("../img/date.png");
+  background-repeat: no-repeat;
+  background-position: -3.5% 0;
+  background-size: 220px;
+}
+@media (max-width: 1023px) {
+  .about {
+    max-width: 720px;
+    margin-top: 59px;
+    padding-bottom: 83px;
+    background-size: 251px;
+    background-position: -8% 0;
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    background: none;
+    width: 288px;
+    margin-top: 60px;
+    padding-bottom: 65px;
+  }
+}
+.about h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-bottom: 18px;
+  padding-left: 180px;
+}
+@media (max-width: 1023px) {
+  .about h2 {
+    font-size: 32px;
+    padding-left: 188px;
+    margin-bottom: 23px;
+  }
+}
+@media (max-width: 767px) {
+  .about h2 {
+    font-size: 28px;
+    line-height: 40px;
+    padding-left: 0;
+  }
+}
+.about p {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.5px;
+  margin-bottom: 21px;
+  max-width: 984px;
+  padding-left: 180px;
+}
+@media (max-width: 1023px) {
+  .about p {
+    max-width: 532px;
+    padding-left: 188px;
+    max-height: 86px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 767px) {
+  .about p {
+    max-width: 288px;
+    max-height: 170px;
+    padding-left: 0;
+    margin-bottom: 43px;
+  }
+}
+
+.about-btn {
+  width: 180px;
+  border: 1px solid #00b2ff;
+  color: #00b2ff;
+  margin-top: 46px;
+  margin-left: 180px;
+}
+@media (max-width: 1023px) {
+  .about-btn {
+    margin-top: 34px;
+    margin-left: 188px;
+  }
+}
+@media (max-width: 767px) {
+  .about-btn {
+    margin-left: 0;
+    margin-top: 37px;
+  }
+}
