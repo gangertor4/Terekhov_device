@@ -111,6 +111,7 @@
   color: $basic-white;
   margin-left: 94px;
   margin-bottom: 93px;
+  transition: color 200ms, background-color 200ms, border 200ms;
 
   @media (max-width: $tablet-width) {
     width: 379px;
@@ -121,6 +122,13 @@
   @media (max-width: $mobile-width) {
     display: none;
   }
+}
+
+.main__btn-consult:hover {
+  background-color: $basic-white;
+  color: $light-blue;
+  box-sizing: border-box;
+  border: 2px solid $basic-white;
 }
 
 .main__btn-consult--mobile {

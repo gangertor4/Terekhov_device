@@ -1,5 +1,7 @@
 .benefits {
   margin-top: 109px;
+  // padding-left: 375px;
+  // padding-right: 375px;
 
   @media (max-width: $tablet-width) {
     margin-top: 59px;
@@ -16,7 +18,7 @@
   width: fit-content;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 570px); 
+  grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(2, auto); 
   gap: 30px 30px;
 
@@ -36,11 +38,13 @@
   min-height: 299px;
   padding-top: 98px;
   padding-left: 45px;
+  padding-right: 42px;
   box-sizing: border-box;
   border: 1px solid $border-grey;
   border-left: 3px solid $light-blue;
   cursor: pointer;
   position: relative;
+  transition: background-color 200ms;
 
   &::before {
     content: "";
@@ -74,6 +78,7 @@
     color: $light-blue;
     margin: 0;
     margin-bottom: 15px;
+    transition: color 200ms;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 21px;
@@ -90,7 +95,8 @@
     font-weight: 400;
     line-height: 21.5px;
     color: $text-grey;
-    width: 483px;
+    max-width: 483px;
+    transition: color 200ms;
 
     @media (max-width: $tablet-width) {
       width: 297px;

@@ -108,6 +108,14 @@
   }
 }
 
+.header-top__contacts-item:hover {
+  color: $light-blue;
+
+  svg {
+    transform: scale(1.2);
+  }
+}
+
 .header-top__contacts-item--phone {
   margin-right: 38px;
   width: 218px;
@@ -138,4 +146,9 @@
     position: absolute;
     left: -999px;
   }
+}
+
+.header-top__contacts-call:hover {
+  background-color: $light-blue;
+  border: 1px solid $light-blue;
 }

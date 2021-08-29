@@ -1,0 +1,186 @@
+.goods {
+  padding-top: 93px;
+  padding-bottom: 127px;
+  background-color: $dark-blue;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 53px;
+    padding-bottom: 78px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 64px;
+  }
+
+  h2 {
+    color: $basic-white;
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 47px;
+    text-align: left;
+
+    @media (max-width: $tablet-width) {
+      width: 702px;
+      margin-bottom: 46px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 280px;
+    }
+  }
+}
+
+.goods__list {
+  max-width: fit-content;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.goods__card {
+  width: 370px;
+  height: 620px;
+  box-sizing: border-box;
+  padding-left: 43px;
+  padding-top: 53px;
+  position: relative;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 380px;
+
+  @media (max-width: $tablet-width) {
+    width: 715px;
+    height: 256px;
+    padding-top: 43px;
+    background-size: 720px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 290px;
+    height: 256px;
+    background-size: 290px;
+  }
+
+  p {
+    font-family: $custom-font-roboto;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $basic-white;
+    width: 170px;
+    margin: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+    background-color: $light-blue;
+    background-image: url("../img/icon_arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 8px;
+    background-position: center;
+    transition: background-image 200ms, background-color 200ms;
+  }
+}
+
+.goods__card {
+  &:hover::after {
+    background-color: $basic-white;
+    background-image: url("../img/icon_arrow_blue.svg");
+  }
+}
+
+.goods__card--create {
+  background-image: url("../img/create_desc.png");
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url("../img/create_desc@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/create_tablet.png");
+    
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/create_tablet@2x.png");
+    };
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/create_mobile.png");
+    
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/create_mobile@2x.png");
+    };
+  }
+}
+
+.goods__card--product {
+  background-image: url("../img/product_desc.png");
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url("../img/product_desc@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/product_tablet.png");
+    
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/product_tablet@2x.png");
+    };
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/product_mobile.png");
+    
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/product_mobile@2x.png");
+    };
+  }
+}
+
+.goods__card--light {
+  background-image: url("../img/light_desc.png");
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url("../img/light_desc@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/light_tablet.png");
+    
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/light_tablet@2x.png");
+    };
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/light_mobile.png");
+    
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/light_mobile@2x.png");
+    };
+  }
+}
