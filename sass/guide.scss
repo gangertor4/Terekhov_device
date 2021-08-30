@@ -1,0 +1,35 @@
+// .guide {
+//   // margin-right: 143px;
+// }
+
+.guide__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 516px;
+  margin-left: -65px;
+  margin-top: 29px;
+}
+
+.guide__item {
+  margin-left: 65px;
+
+  a {
+    text-decoration: none;
+    font-family: $custom-font-pt;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    color: $dark-blue;
+    opacity: 0.5;
+    transition: opacity 200ms;
+  }
+}
+
+.guide__item a:hover {
+  opacity: 1;
+}
