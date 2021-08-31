@@ -1,6 +1,28 @@
-// .guide {
-//   // margin-right: 143px;
-// }
+.guide {
+  h3 {
+    margin: 0;
+
+    @media (max-width: $mobile-width) {
+      margin-left: 15px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 38px;
+    padding-left: 25px;
+    margin-bottom: 33px;
+    width: 51%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-left: 0;
+    margin: 0 auto;
+    margin-top: 29px;
+    margin-bottom: 0;
+    padding-bottom: 28px;
+  }
+}
 
 .guide__list {
   list-style: none;
@@ -12,10 +34,25 @@
   width: 516px;
   margin-left: -65px;
   margin-top: 29px;
+
+  @media (max-width: $tablet-width) {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 36px;
+  }
 }
 
 .guide__item {
   margin-left: 65px;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 15px;
+  }
 
   a {
     text-decoration: none;

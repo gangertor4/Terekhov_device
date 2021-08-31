@@ -6,6 +6,16 @@
   margin: 0;
   padding: 0;
   margin-top: 54px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    padding-right: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 31px;
+    padding-right: 0;
+  }
 }
 
 .social__item {
