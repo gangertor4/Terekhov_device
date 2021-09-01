@@ -5,6 +5,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const svgstore = require("gulp-svgstore");
 const rename = require("gulp-rename");
+const concat = require('gulp-concat');
 
 gulp.task('sass', function() {
   return gulp.src("sass/style.scss")
@@ -42,3 +43,12 @@ const sprite = () => {
 }
 
 exports.sprite = sprite;
+
+// JS
+const concatJs = () => {
+  return gulp.src("js/*.js")
+    .pipe(concat("script.js"))
+    .pipe(gulp.dest("js"));
+}
+
+exports.concatJs = concatJs;

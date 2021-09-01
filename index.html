@@ -148,9 +148,9 @@
       </section>
     </div>
     <section class="footer__guide guide">
-      <h3 class="footer-title">Разделы сайты</h3>
-      <div class="footer__acc"></div>
-      <ul class="guide__list">
+      <h3 class="footer-title guide__title">Разделы сайты</h3>
+      <div class="accordion accordion--plus guide__acc"></div>
+      <ul class="guide__list list--closed">
         <li class="guide__item">
           <a href=#>
             О компании
@@ -189,9 +189,9 @@
       </ul>
     </section>
     <section class="footer__contacts contacts">
-      <h3 class="footer-title">Наш офис</h3>
-      <div class="footer__acc"></div>
-      <ul class="contacts__list">
+      <h3 class="footer-title contacts__title">Наш офис</h3>
+      <div class="accordion accordion--plus contacts__acc"></div>
+      <ul class="contacts__list list--closed">
         <li class="contacts__item">
           <p>г. Мытищи, Олимпийский проспект, д.10</p>
         </li>
@@ -212,5 +212,28 @@
       <p>Developed by wow studio</p>
     </section>
   </footer>
+  <section class="popup visually-hidden">
+    <button type="button" class="popup__close"></button>
+    <h2>Закажите звонок</h2>
+    <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form action="post" class="popup__form">
+      <label for="name">
+        <input type="text" name="user-name" id="name" placeholder="Имя">
+      </label>
+      <label for="phone">
+        <input type="tel" name="user-phone" id="phone" placeholder="Телефон">
+      </label>
+      <label for="">
+        <textarea placeholder="Ваш вопрос"></textarea>
+      </label>
+      <button type="submit" class="button popup__btn">Отправить</button>
+      <div class="popup__checkbox">
+        <input type="checkbox" id="popup-user-data" checked>
+        <label for="popup-user-data">Я согласен на обработку персональных данных</label>
+      </div>
+    </form>
+  </section>
+  <div class="disabler visually-hidden"></div>
+  <script src="js/script.js"></script>
 </body>
 </html>
