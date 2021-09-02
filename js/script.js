@@ -78,3 +78,28 @@ callBtn.addEventListener('click', (evt) => {
   popUpAction(evt);
 })
 
+//VALIDITY
+
+const element = document.querySelectorAll('#phone');
+const maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+
+element.forEach((el) => {
+  const mask = IMask(el, maskOptions);
+});
+
+//SCROLL
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};

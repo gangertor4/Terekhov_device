@@ -39,14 +39,14 @@
     <section class="main">
       <h1>печатные платы</h1>
       <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a href="#" class="main__btn-consult">Получить бесплатную консультацию</a>
-      <a href="#" class="main__btn-consult main__btn-consult--mobile">бесплатная консультация</a>
-      <a href="#" class="main__down">Cкролл вниз</a>
+      <a href="#feedback" class="main__btn-consult">Получить бесплатную консультацию</a>
+      <a href="#feedback" class="main__btn-consult main__btn-consult--mobile">бесплатная консультация</a>
+      <a href="#benefits" class="main__down">Cкролл вниз</a>
     </section>
   </header>
   <main>
     <div class="benefits-about-wrapper">
-      <section class="benefits">
+      <section class="benefits" id="benefits">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="benefits__list">
           <li class="benefits__card benefits__card--time">
@@ -67,14 +67,14 @@
           </li>
         </ul>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <h2 class="title">О компании</h2>
         <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
         <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
         <a href="#" class="button about-btn">подробнее</a>
       </section>
     </div>
-    <section class="goods">
+    <section class="goods" id="goods">
       <h2 class="title">Service Device предлагает следующие товары и услуги</h2>
       <ul class="goods__list">
         <li class="goods__card goods__card--create">
@@ -88,7 +88,7 @@
         </li>
       </ul>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <div class="feedback__wrapper">
         <h2 class="title">Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
@@ -152,27 +152,27 @@
       <div class="accordion accordion--plus guide__acc"></div>
       <ul class="guide__list list--closed">
         <li class="guide__item">
-          <a href=#>
+          <a href="#about">
             О компании
           </a>
         </li>
         <li class="guide__item">
-          <a href=#>
+          <a href="#goods">
             Продукты
           </a>
         </li>
         <li class="guide__item">
-          <a href=#>
+          <a href="#goods">
             Производство печатных плат
           </a>
         </li>
         <li class="guide__item">
-          <a href=#>
+          <a href="#goods">
             Монтаж печатных плат
           </a>
         </li>
         <li class="guide__item">
-          <a href=#>
+          <a href="#goods">
             Комплектующие
           </a>
         </li>
@@ -221,7 +221,7 @@
         <input type="text" name="user-name" id="name" placeholder="Имя">
       </label>
       <label for="phone">
-        <input type="tel" name="user-phone" id="phone" placeholder="Телефон">
+        <input type="tel" name="user-phone" id="phone" placeholder="Телефон" value="">
       </label>
       <label for="">
         <textarea placeholder="Ваш вопрос"></textarea>
@@ -234,6 +234,7 @@
     </form>
   </section>
   <div class="disabler visually-hidden"></div>
+  <script src="https://unpkg.com/imask"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
