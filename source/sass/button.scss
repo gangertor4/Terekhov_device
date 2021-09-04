@@ -1,0 +1,15 @@
+.button {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: $custom-font-roboto;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 200ms, background-color 200ms;
+}

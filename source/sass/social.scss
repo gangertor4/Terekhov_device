@@ -1,0 +1,29 @@
+.social__list {
+  list-style: none;
+  width: 112px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-top: 54px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    padding-right: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 20px;
+    padding-right: 0;
+  }
+}
+
+.social__item {
+  transform: scale(1);
+  transition: transform 200ms;
+}
+
+.social__item:hover,
+.social__item:focus {
+  transform: scale(1.3);
+}

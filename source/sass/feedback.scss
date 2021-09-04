@@ -1,0 +1,229 @@
+.feedback {
+  padding-top: 62px;
+  padding-bottom: 113px;
+  background-color: $light-blue;
+  background-image: url("../img/questions_desc_left.png"), url("../img/questions_desc_right.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 175px -60px, 100% 35px;
+
+  @media (max-width: $tablet-width) {
+    background: none;
+    background-color: $light-blue;
+    padding-top: 53px;
+    padding-bottom: 103px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 33px;
+    padding-bottom: 41px;
+  }
+
+  h2 {
+    color: $basic-white;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-right: 29px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 243px;
+      margin: 0 auto;
+      margin-bottom: 13.5px;
+      padding-right: 45px;
+    }
+  }
+
+  p {
+    font-family: $custom-font-pt;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $basic-white;
+    margin: 0;
+    margin-bottom: 51px;
+    padding-right: 252px;
+
+    @media (max-width: $tablet-width) {
+      padding-left: 5px;
+      margin-bottom: 56px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-right: 25px;
+      width: 270px;
+      margin: 0 auto;
+      margin-bottom: 27px;
+    }
+  }
+}
+
+.feedback__wrapper {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    align-items: flex-start;
+    max-width: 639px;
+    padding-left: 43px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    max-width: 767px;
+  }
+}
+
+.feedback__form {
+  width: 570px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    width: 590px;
+    padding-left: 5px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+  }
+
+  input:not([type="checkbox"]),
+  textarea {
+    background-color: $input-blue;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 16px;
+    font-family: $custom-font-pt;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $basic-white;
+
+
+    &::placeholder {
+      color: $basic-white;
+    }
+  }
+
+  input:not([type="checkbox"]) {
+    width: 270px;
+    height: 50px;
+    margin-bottom: 40px;
+
+    @media (max-width: $tablet-width) {
+      width: 280px;
+      height: 52px;
+      margin-bottom: 41px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+
+  label {
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
+  }
+
+  textarea {
+    resize: none;
+    width: 565px;
+    height: 154px;
+    margin-bottom: 40px;
+    padding-top: 14px;
+
+    @media (max-width: $tablet-width) {
+      width: 590px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 26px;
+      height: 104px;
+      width: 100%;
+    }
+  }
+}
+
+.feedback__btn {
+  width: 270px;
+  height: 45px;
+  background-color: $light-blue;
+  color: $basic-white;
+  outline: none;
+  border: 1px solid $basic-white;
+
+  @media (max-width: $tablet-width) {
+    width: 280px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 290px;
+    margin-bottom: 30px;
+  }
+}
+
+.feedback__btn:hover {
+  background-color: $basic-white;
+  color: $light-blue;
+  border: 1px solid $light-blue;
+}
+
+.feedback__checkbox {
+  width: 230px;
+  align-self: center;
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-family: $custom-font-pt;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $basic-white;
+    position: relative;
+  }
+
+  input + label::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    border: 1px solid $basic-white;
+    top: 0;
+    left: -32px;
+  }
+
+  input:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 7.5px;
+    height: 4.5px;
+    background-image: url("../img/icon_checkbox.svg");
+    background-size: 7.5px;
+    top: 5.5px;
+    left: -28px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 5px;
+  }
+}

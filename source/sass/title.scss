@@ -1,0 +1,16 @@
+.title {
+  font-family: $custom-font-roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}

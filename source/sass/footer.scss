@@ -1,0 +1,195 @@
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto 52px;
+  row-gap: 45px;
+  grid-template-areas:
+    "social catalog contacts"
+    "bottom bottom bottom";
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 0;
+    grid-template-areas:
+      "social social"
+      "catalog contacts"
+      "bottom bottom";
+    margin-top: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+  }
+}
+
+.footer__logo-social-wrapper {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin-left: 10px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    border-bottom: 1px solid $footer-grey;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+}
+
+.footer__logo {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(2, min-content);
+  gap: 0 16px;
+  grid-template-areas:
+    "logo title"
+    "logo subtitle";
+
+  @media (max-width: $tablet-width) {
+    padding-left: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    margin-bottom: 12px;
+  }
+
+  svg {
+    grid-area: logo;
+    align-self: center;
+  }
+
+  h3 {
+    grid-area: title;
+    margin: 0;
+    font-family: $custom-font-roboto;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 5px;
+    color: $logo-black;
+  }
+
+  p {
+    grid-area: subtitle;
+    margin: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: $logo-grey;
+  }
+}
+
+.footer__company {
+  font-family: $custom-font-pt;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $dark-blue;
+  opacity: 0.5;
+  width: 233px;
+  position: absolute;
+  bottom: -95px;
+  right: -100px;
+
+  @media (max-width: $tablet-width) {
+    position: static;
+    margin-left: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 4px;
+  }
+}
+
+.footer__guide {
+  grid-area: catalog;
+  justify-self: center;
+
+  @media (max-width: $tablet-width) {
+    justify-self: start;
+  }
+}
+
+.footer__contacts {
+  grid-area: contacts;
+  justify-self: end;
+}
+
+.footer__bottom {
+  grid-area: bottom;
+  display: flex;
+  max-width: 1411px;
+  padding-left: 10px;
+  justify-content: space-between;
+  border-top: 1px solid $footer-grey;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-top: 21px;
+    padding-bottom: 24px;
+
+    p {
+      margin: 0;
+    }
+
+    p:nth-child(2) {
+      padding-left: 20px;
+    }
+
+    p:last-child {
+      padding-right: 35px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 26px;
+    width: 100%;
+
+    p:nth-child(2),
+    p:last-child {
+      padding: 0;
+      margin-bottom: 21px;
+      padding-right: 16px;
+    }
+  }
+
+  p {
+    font-family: $custom-font-pt;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $dark-blue;
+    opacity: 0.5;
+  }
+}
+
+.footer__copyright {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+.header {
+  background-color: $dark-blue;
+  padding-top: 33px;
+  background-image: url("../img/main_bg.png"), url("../img/main_circuit.png"), url("../img/main_triangulars.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 0 0, 85.5% 254px, 82.5% 118px;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/main_bg@2x.png"), url("../img/main_circuit@2x.png"), url("../img/main_triangulars@2x.png");
+    background-size: contain, 705px, 670px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 21px;
+
+    background-size: cover, 465px, 515px;
+    background-position: 0 0, 510px 113px, 175% -35px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 17px;
+
+    background-size: cover, 301px, 480px;
+    background-position: 0 0, 26px 92px, 150px -40px;
+  }
+}
