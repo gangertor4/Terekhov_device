@@ -33,7 +33,7 @@
           </svg>
           <span>+7 (495) 000 52 52</span>
         </a>
-        <a href="#" class="button header-top__contacts-call">заказать звонок</a>
+        <a href="blank.html" class="button header-top__contacts-call">заказать звонок</a>
       </div>
     </div>
     <section class="main">
@@ -71,7 +71,7 @@
         <h2 class="title">О компании</h2>
         <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
         <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-        <a href="#" class="button about-btn">подробнее</a>
+        <a href="#" class="button about__btn">подробнее</a>
       </section>
     </div>
     <section class="goods" id="goods">
@@ -92,19 +92,19 @@
       <div class="feedback__wrapper">
         <h2 class="title">Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form action="post" class="feedback__form">
+        <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
           <label for="name">
-            <input type="text" name="user-name" id="name" placeholder="Имя">
+            <input type="text" name="user-name" id="name" placeholder="Имя" required>
           </label>
           <label for="phone">
-            <input type="tel" name="user-phone" id="phone" placeholder="Телефон" class="phone">
+            <input type="tel" name="user-phone" id="phone" placeholder="Телефон" class="phone" required>
           </label>
           <label for="question">
             <textarea placeholder="Ваш вопрос" id="question"></textarea>
           </label>
           <button type="submit" class="button feedback__btn">Задать вопрос</button>
           <div class="feedback__checkbox">
-            <input type="checkbox" id="user-data" checked>
+            <input type="checkbox" id="user-data" checked required>
             <label for="user-data">Я согласен на обработку персональных данных</label>
           </div>
         </form>
@@ -178,12 +178,12 @@
           </a>
         </li>
         <li class="guide__item">
-          <a href=#>
+          <a href="#">
             Доставка
           </a>
         </li>
         <li class="guide__item">
-          <a href=#>
+          <a href="#">
             Контакты
           </a>
         </li>
@@ -209,33 +209,32 @@
     </section>
     <div class="footer__bottom">
       <p class="footer__copyright">Все права защищены</p>
-      <p>Условия конфиденциальности</p>
-      <p>Developed by wow studio</p>
+      <p class="footer__confidental">Условия конфиденциальности</p>
+      <p class="footer__made-by">Developed by wow studio</p>
     </div>
   </footer>
   <section class="popup visually-hidden">
     <button type="button" class="popup__close"></button>
     <h2>Закажите звонок</h2>
     <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form action="post" class="popup__form">
+    <form class="popup__form" method="post" action="https://echo.htmlacademy.ru">
       <label for="name-popup">
-        <input type="text" name="user-name" id="name-popup" placeholder="Имя">
+        <input type="text" name="user-name" id="name-popup" placeholder="Имя" required>
       </label>
       <label for="phone-popup">
-        <input type="tel" name="user-phone" id="phone-popup" placeholder="Телефон" value="" class="phone">
+        <input type="tel" name="user-phone" id="phone-popup" placeholder="Телефон" value="" class="phone" required>
       </label>
       <label for="question-popup">
         <textarea placeholder="Ваш вопрос" id="question-popup"></textarea>
       </label>
       <button type="submit" class="button popup__btn">Отправить</button>
       <div class="popup__checkbox">
-        <input type="checkbox" id="popup-user-data" checked>
+        <input type="checkbox" id="popup-user-data" checked required>
         <label for="popup-user-data">Я согласен на обработку персональных данных</label>
       </div>
     </form>
   </section>
   <div class="disabler visually-hidden"></div>
-  <script src="https://unpkg.com/imask"></script>
   <script src="js/vendor.js"></script>
   <script src="js/script.js"></script>
 </body>

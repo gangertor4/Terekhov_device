@@ -13,24 +13,24 @@
   left: 0;
   margin: auto;
   color: $basic-white;
+}
 
-  h2 {
-    font-family: $custom-font-roboto;
-    font-weight: 400;
-    font-size: 28px;
-    margin: 0;
-    margin-bottom: 24px;
-  }
+.popup h2 {
+  font-family: $custom-font-roboto;
+  font-weight: 400;
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 24px;
+}
 
-  p {
-    font-family: $custom-font-pt;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21.5px;
-    width: 381px;
-    margin: 0;
-    margin-bottom: 35px;
-  }
+.popup p {
+  font-family: $custom-font-pt;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.5px;
+  width: 381px;
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 .popup__close {
@@ -71,39 +71,37 @@
   }
 }
 
-.popup__form {
-  input:not([type="checkbox"]),
-  textarea {
-    background-color: $input-blue;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    padding-left: 16px;
-    font-family: $custom-font-pt;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 400;
+.popup__form input:not([type="checkbox"]),
+.popup__form textarea {
+  background-color: $input-blue;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding-left: 16px;
+  font-family: $custom-font-pt;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $basic-white;
+
+
+  &::placeholder {
     color: $basic-white;
-
-
-    &::placeholder {
-      color: $basic-white;
-    }
   }
+}
 
-  input:not([type="checkbox"]) {
-    width: 411px;
-    height: 51px;
-    margin-bottom: 30px;
-  }
+.popup__form input:not([type="checkbox"]) {
+  width: 411px;
+  height: 51px;
+  margin-bottom: 30px;
+}
 
-  textarea {
-    resize: none;
-    width: 411px;
-    height: 104px;
-    margin-bottom: 30px;
-    padding-top: 14px;
-  }
+.popup__form textarea {
+  resize: none;
+  width: 411px;
+  height: 104px;
+  margin-bottom: 30px;
+  padding-top: 14px;
 }
 
 .popup__btn {

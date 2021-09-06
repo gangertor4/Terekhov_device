@@ -1,7 +1,5 @@
 .benefits {
   margin-top: 109px;
-  // padding-left: 375px;
-  // padding-right: 375px;
 
   @media (max-width: $tablet-width) {
     margin-top: 59px;
@@ -53,6 +51,13 @@
     background-size: contain;
     top: 40px;
     left: 45px;
+
+    @media (max-width: $tablet-width) {
+      &::before {
+        top: 27px;
+        left: 27px;
+      }
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -60,65 +65,61 @@
     padding-top: 67px;
     padding-left: 27px;
     border-left: 2px solid $light-blue;
-
-    &::before {
-      top: 27px;
-      left: 27px;
-    }
   }
 
   @media (max-width: $mobile-width) {
     box-sizing: border-box;
   }
+}
 
-  h3 {
-    font-family: $custom-font-roboto;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 34px;
-    color: $light-blue;
-    margin: 0;
-    margin-bottom: 15px;
-    transition: color 200ms;
+.benefits__card h3 {
+  font-family: $custom-font-roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  color: $light-blue;
+  margin: 0;
+  margin-bottom: 15px;
+  transition: color 200ms;
 
-    @media (max-width: $tablet-width) {
-      margin-bottom: 10px;
-      width: 297px;
-    }
-
-    @media (max-width: $mobile-width) {
-      font-size: 20px;
-    }
+  @media (max-width: $tablet-width) {
+    margin-bottom: 10px;
+    width: 297px;
   }
 
-  p {
-    font-family: $custom-font-pt;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 21.5px;
-    color: $text-grey;
-    max-width: 483px;
-    transition: color 200ms;
-
-    @media (max-width: $tablet-width) {
-      width: 297px;
-      margin: 0;
-    }
-
-    @media (max-width: $mobile-width) {
-      width: 245px;
-      line-height: 22px;
-    }
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
   }
 }
 
+.benefits__card p {
+  font-family: $custom-font-pt;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.5px;
+  color: $text-grey;
+  max-width: 483px;
+  transition: color 200ms;
+
+  @media (max-width: $tablet-width) {
+    width: 297px;
+    margin: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 245px;
+    line-height: 22px;
+  }
+}
+
+
 .benefits__card:hover {
   background-color: $light-blue;
+}
 
-  h3,
-  p {
-    color: $basic-white;
-  }
+.benefits__card:hover h3,
+.benefits__card:hover p {
+  color: $basic-white;
 }
 
 .benefits__card--time {
@@ -157,10 +158,12 @@
 
   @media (max-width: $mobile-width) {
     height: 310px;
+  }
+}
 
-    p {
-      width: 251px;
-    }
+.benefits__card--provider p {
+  @media (max-width: $mobile-width) {
+    width: 251px;
   }
 }
 

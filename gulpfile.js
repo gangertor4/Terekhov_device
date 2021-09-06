@@ -1,10 +1,10 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const browserSync = require('browser-sync').create();
+const gulp = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+const browserSync = require("browser-sync").create();
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const rename = require("gulp-rename");
-const concat = require('gulp-concat');
+const concat = require("gulp-concat");
 
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
@@ -50,14 +50,6 @@ const reload = done => {
   done();
 }
 
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series(stylesMin));
-  gulp.watch("source/js/*.js");
-  gulp.watch("source/*.html", gulp.series(html, reload));
-}
-
 
 //BUILD
 
@@ -82,7 +74,7 @@ const sprite = () => {
   .pipe(svgsprite({
     mode: {
       stack: {
-        sprite: "../sprite.svg"  //sprite file name
+        sprite: "../sprite.svg"
       }
     },
   }))
@@ -94,7 +86,6 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
       "source/fonts/*.{woff2,woff}",
-      "source/js/vendor.js",
     ], {
       base: "source"
     })
@@ -105,13 +96,21 @@ const copy = (done) => {
 exports.copy = copy;
 
 
-const concatJs = () => {
-  return gulp.src(["source/js/*.js", "!source/js/vendor.js"])
+const concatJsript = () => {
+  return gulp.src("source/js/modules/*.js")
     .pipe(concat("script.js"))
     .pipe(gulp.dest("build/js"));
 }
 
-exports.concatJs = concatJs;
+exports.concatJsript = concatJsript;
+
+const concatJsvendor = () => {
+  return gulp.src("source/js/vendor/*.js")
+  .pipe(concat("vendor.js"))
+  .pipe(gulp.dest("build/js"));
+}
+
+exports.concatJsvendor = concatJsvendor;
 
 const stylesMin = () => {
   return gulp.src("source/sass/style.scss")
@@ -135,6 +134,14 @@ const html = () => {
     .pipe(gulp.dest("build"));
 }
 
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/sass/**/*.scss", gulp.series(stylesMin));
+  gulp.watch("source/js/**/*.js", gulp.series(concatJsript, reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
+}
+
 
 const clean = () => {
   return del("build");
@@ -146,9 +153,12 @@ const build = gulp.series(
     stylesMin,
     html,
     copy,
+    concatJsript,
+    concatJsvendor,
+  ),
+  gulp.series(
     images,
     sprite,
-    concatJs,
   ));
 
 exports.build = build;
@@ -160,11 +170,12 @@ exports.default = gulp.series(
     stylesMin,
     html,
     copy,
-    images,
-    sprite,
-    concatJs,
+    concatJsript,
+    concatJsvendor,
   ),
   gulp.series(
+    images,
+    sprite,
     server,
     watcher,
   ));

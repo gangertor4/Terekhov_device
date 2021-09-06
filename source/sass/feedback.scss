@@ -17,46 +17,46 @@
     padding-top: 33px;
     padding-bottom: 41px;
   }
+}
 
-  h2 {
-    color: $basic-white;
-    margin-bottom: 10px;
-    text-align: left;
-    padding-right: 29px;
+.feedback h2 {
+  color: $basic-white;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-right: 29px;
 
-    @media (max-width: $tablet-width) {
-      margin-bottom: 16px;
-    }
-
-    @media (max-width: $mobile-width) {
-      width: 243px;
-      margin: 0 auto;
-      margin-bottom: 13.5px;
-      padding-right: 45px;
-    }
+  @media (max-width: $tablet-width) {
+    margin-bottom: 16px;
   }
 
-  p {
-    font-family: $custom-font-pt;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 400;
-    color: $basic-white;
-    margin: 0;
-    margin-bottom: 51px;
-    padding-right: 252px;
+  @media (max-width: $mobile-width) {
+    width: 243px;
+    margin: 0 auto;
+    margin-bottom: 13.5px;
+    padding-right: 45px;
+  }
+}
 
-    @media (max-width: $tablet-width) {
-      padding-left: 5px;
-      margin-bottom: 56px;
-    }
+.feedback p {
+  font-family: $custom-font-pt;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $basic-white;
+  margin: 0;
+  margin-bottom: 51px;
+  padding-right: 252px;
 
-    @media (max-width: $mobile-width) {
-      padding-right: 25px;
-      width: 270px;
-      margin: 0 auto;
-      margin-bottom: 27px;
-    }
+  @media (max-width: $tablet-width) {
+    padding-left: 5px;
+    margin-bottom: 56px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 25px;
+    width: 270px;
+    margin: 0 auto;
+    margin-bottom: 27px;
   }
 }
 
@@ -97,66 +97,66 @@
     margin: 0 auto;
     width: calc(100% - 30px);
   }
+}
 
-  input:not([type="checkbox"]),
-  textarea {
-    background-color: $input-blue;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    padding-left: 16px;
-    font-family: $custom-font-pt;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 400;
+.feedback__form input:not([type="checkbox"]),
+.feedback__form textarea {
+  background-color: $input-blue;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding-left: 16px;
+  font-family: $custom-font-pt;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $basic-white;
+
+
+  &::placeholder {
     color: $basic-white;
+  }
+}
 
+.feedback__form input:not([type="checkbox"]) {
+  width: 270px;
+  height: 50px;
+  margin-bottom: 40px;
 
-    &::placeholder {
-      color: $basic-white;
-    }
+  @media (max-width: $tablet-width) {
+    width: 280px;
+    height: 52px;
+    margin-bottom: 41px;
   }
 
-  input:not([type="checkbox"]) {
-    width: 270px;
-    height: 50px;
-    margin-bottom: 40px;
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
 
-    @media (max-width: $tablet-width) {
-      width: 280px;
-      height: 52px;
-      margin-bottom: 41px;
-    }
+.feedback__form label {
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
 
-    @media (max-width: $mobile-width) {
-      margin-bottom: 30px;
-      width: 100%;
-    }
+.feedback__form textarea {
+  resize: none;
+  width: 565px;
+  height: 154px;
+  margin-bottom: 40px;
+  padding-top: 14px;
+
+  @media (max-width: $tablet-width) {
+    width: 590px;
+    margin-bottom: 48px;
   }
 
-  label {
-    @media (max-width: $mobile-width) {
-      width: 100%;
-    }
-  }
-
-  textarea {
-    resize: none;
-    width: 565px;
-    height: 154px;
-    margin-bottom: 40px;
-    padding-top: 14px;
-
-    @media (max-width: $tablet-width) {
-      width: 590px;
-      margin-bottom: 48px;
-    }
-
-    @media (max-width: $mobile-width) {
-      margin-bottom: 26px;
-      height: 104px;
-      width: 100%;
-    }
+  @media (max-width: $mobile-width) {
+    margin-bottom: 26px;
+    height: 104px;
+    width: 100%;
   }
 }
 
@@ -187,6 +187,10 @@
 .feedback__checkbox {
   width: 230px;
   align-self: center;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 5px;
+  }
 
   input {
     display: none;
@@ -221,9 +225,5 @@
     background-size: 7.5px;
     top: 5.5px;
     left: -28px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-left: 5px;
   }
 }

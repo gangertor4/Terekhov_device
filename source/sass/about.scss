@@ -22,52 +22,53 @@
     margin-top: 60px;
     padding-bottom: 65px;
   }
+}
 
-  h2 {
-    margin-bottom: 20px;
-    padding-left: 180px;
+.about h2 {
+  margin-bottom: 20px;
+  padding-left: 180px;
 
-    @media (max-width: $tablet-width) {
-      font-size: 32px;
-      padding-left: 188px;
-      margin-top: 10px;
-      margin-bottom: 23px;
-    }
-
-    @media (max-width: $mobile-width) {
-      font-size: 28px;
-      line-height: 40px;
-      padding-left: 0;
-      margin-bottom: 19px;
-    }
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    padding-left: 188px;
+    margin-top: 10px;
+    margin-bottom: 23px;
   }
 
-  p {
-    font-family: $custom-font-pt;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    margin-bottom: 21px;
-    max-width: 984px;
-    padding-left: 180px;
-
-    @media (max-width: $tablet-width) {
-      max-width: 532px;
-      padding-left: 188px;
-      max-height: 86px;
-      overflow: hidden;
-    }
-
-    @media (max-width: $mobile-width) {
-      max-width: 288px;
-      max-height: 170px;
-      padding-left: 0;
-      margin-bottom: 38px;
-    }
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 40px;
+    padding-left: 0;
+    margin-bottom: 19px;
   }
 }
 
-.about-btn {
+.about p {
+  font-family: $custom-font-pt;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 21px;
+  max-width: 984px;
+  padding-left: 180px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 532px;
+    padding-left: 188px;
+    max-height: 86px;
+    overflow: hidden;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 288px;
+    max-height: 170px;
+    padding-left: 0;
+    margin-bottom: 38px;
+  }
+}
+
+
+.about__btn {
   width: 180px;
   border: 1px solid $light-blue;
   color: $light-blue;
@@ -85,7 +86,7 @@
   }
 }
 
-.about-btn:hover {
+.about__btn:hover {
   color: $basic-white;
   background-color: $light-blue;
 }
