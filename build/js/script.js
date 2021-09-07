@@ -25,24 +25,30 @@ const openAcc = (btn, listCl) => {
   listCl.classList.toggle('list--closed');
 };
 
-guideTitle.addEventListener('click', () => {
-  openAcc(guideBtn, guideList);
-  closeAnotherAcc(contactsBtn, contactsList);
-});
+if (guideContainer) {
+  guideTitle.addEventListener('click', () => {
+    openAcc(guideBtn, guideList);
+    closeAnotherAcc(contactsBtn, contactsList);
+  });
+}
 
-contactsTitle.addEventListener('click', () => {
-  openAcc(contactsBtn, contactsList);
-  closeAnotherAcc(guideBtn, guideList);
-});
+if (contactsContainer) {
+  contactsTitle.addEventListener('click', () => {
+    openAcc(contactsBtn, contactsList);
+    closeAnotherAcc(guideBtn, guideList);
+  });
+}
 
 const element = document.querySelectorAll('.phone');
 const maskOptions = {
   mask: '+{7}(000)000-00-00',
 };
 
-element.forEach((el) => {
-  const mask = IMask(el, maskOptions);
-});
+if (element) {
+  element.forEach((el) => {
+    const mask = IMask(el, maskOptions);
+  });
+}
 
 const popupForm = document.querySelector('.popup');
 const closePopupBtn = popupForm.querySelector('.popup__close');
@@ -84,9 +90,11 @@ const popUpAction = function (evt) {
   });
 };
 
-callBtn.addEventListener('click', (evt) => {
-  popUpAction(evt);
-});
+if (callBtn) {
+  callBtn.addEventListener('click', (evt) => {
+    popUpAction(evt);
+  });
+}
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {

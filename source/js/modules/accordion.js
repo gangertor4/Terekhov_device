@@ -25,12 +25,16 @@ const openAcc = (btn, listCl) => {
   listCl.classList.toggle('list--closed');
 };
 
-guideTitle.addEventListener('click', () => {
-  openAcc(guideBtn, guideList);
-  closeAnotherAcc(contactsBtn, contactsList);
-});
+if (guideContainer) {
+  guideTitle.addEventListener('click', () => {
+    openAcc(guideBtn, guideList);
+    closeAnotherAcc(contactsBtn, contactsList);
+  });
+}
 
-contactsTitle.addEventListener('click', () => {
-  openAcc(contactsBtn, contactsList);
-  closeAnotherAcc(guideBtn, guideList);
-});
+if (contactsContainer) {
+  contactsTitle.addEventListener('click', () => {
+    openAcc(contactsBtn, contactsList);
+    closeAnotherAcc(guideBtn, guideList);
+  });
+}

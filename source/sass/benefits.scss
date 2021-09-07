@@ -130,7 +130,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    height: 310px;
+    min-height: 310px;
   }
 }
 
@@ -148,7 +148,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    height: 306px;
+    min-height: 306px;
 
     &::before {
       width: 32px;
@@ -157,7 +157,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    height: 310px;
+    min-height: 310px;
   }
 }
 
@@ -188,7 +188,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    height: 232px;
+    min-height: 232px;
   }
 }
 
@@ -213,7 +213,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    height: 244px;
+    min-height: 244px;
   }
 }
 

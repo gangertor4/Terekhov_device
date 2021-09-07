@@ -38,6 +38,8 @@ const popUpAction = function (evt) {
   });
 };
 
-callBtn.addEventListener('click', (evt) => {
-  popUpAction(evt);
-});
+if (callBtn) {
+  callBtn.addEventListener('click', (evt) => {
+    popUpAction(evt);
+  });
+}

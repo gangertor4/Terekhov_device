@@ -8,7 +8,7 @@
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
     background-image: url("../img/main_bg@2x.png"), url("../img/main_circuit@2x.png"), url("../img/main_triangulars@2x.png");
-    background-size: contain, 705px, 670px;
+    background-size: cover, 705px, 670px;
   }
 
   @media (max-width: $tablet-width) {
