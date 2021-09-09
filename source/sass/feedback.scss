@@ -160,6 +160,11 @@
   }
 }
 
+.feedback__form input:not([type="checkbox"]):focus,
+.feedback__form textarea:focus {
+  outline: 2px solid $basic-white;
+}
+
 .feedback__btn {
   width: 270px;
   min-height: 45px;
@@ -167,6 +172,7 @@
   color: $basic-white;
   outline: none;
   border: 1px solid $basic-white;
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     width: 280px;
@@ -178,7 +184,8 @@
   }
 }
 
-.feedback__btn:hover {
+.feedback__btn:hover,
+.feedback__btn:focus {
   background-color: $basic-white;
   color: $light-blue;
   border: 1px solid $light-blue;
@@ -187,6 +194,7 @@
 .feedback__checkbox {
   width: 230px;
   align-self: center;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     padding-left: 5px;
@@ -203,6 +211,11 @@
     font-weight: 400;
     color: $basic-white;
     position: relative;
+    cursor: pointer;
+  }
+
+  label:focus {
+    outline: 2px solid $basic-white;
   }
 
   input + label::before {
@@ -214,6 +227,7 @@
     border: 1px solid $basic-white;
     top: 0;
     left: -32px;
+    cursor: pointer;
   }
 
   input:checked + label::after {

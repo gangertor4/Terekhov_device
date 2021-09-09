@@ -1,14 +1,15 @@
 .header {
   background-color: $dark-blue;
   padding-top: 33px;
-  background-image: url("../img/main_bg.png"), url("../img/main_circuit.png"), url("../img/main_triangulars.png");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 0 0, 85.5% 254px, 82.5% 118px;
+  background-image: url("../img/main_bg.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
-    background-image: url("../img/main_bg@2x.png"), url("../img/main_circuit@2x.png"), url("../img/main_triangulars@2x.png");
-    background-size: cover, 705px, 670px;
+    background-image: url("../img/main_bg@2x.png");
+    background-size: cover;
   }
 
   @media (max-width: $tablet-width) {
@@ -23,5 +24,20 @@
 
     background-size: cover, 301px, 480px;
     background-position: 0 0, 26px 92px, 150px -40px;
+  }
+}
+
+.header__wrapper {
+  max-width: 1411px;
+  margin: 0 auto;
+  background-image: url("../img/main_circuit.png"), url("../img/main_triangulars.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 112% 225px, 82.5% 118px;
+  background-size: 705px, 670px;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/main_circuit@2x.png"), url("../img/main_triangulars@2x.png");
+    background-size: 705px, 670px;
   }
 }
