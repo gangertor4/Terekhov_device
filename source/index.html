@@ -16,11 +16,10 @@
     <div class="header__wrapper">
       <div class="header-top">
         <div class="header-top__logo">
-          <svg width="52" height="52">
-            <use xlink:href="img/sprite.svg#icon_logo"></use>
-          </svg>
-          <h3>Smart Device</h3>
-          <p>умные технологии</p>
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/icon_logo.svg">
+            <img src="img/icon_logo_with_text.svg" width="202" height="52" alt="логотип компании Умные технологии">
+          </picture>
         </div>
         <div class="header-top__contacts">
           <a href="mailto:info@sd.ru" class="header-top__contacts-item header-top__contacts-item--mail" aria-label="Написать нам">
@@ -103,7 +102,7 @@
             <input type="tel" name="user-phone" id="phone" placeholder="Телефон" class="phone" required>
           </label>
           <label for="question">
-            <textarea placeholder="Ваш вопрос" id="question"></textarea>
+            <textarea placeholder="Ваш вопрос" id="question" name="user-question"></textarea>
           </label>
           <button type="submit" class="button feedback__btn">Задать вопрос</button>
           <div class="feedback__checkbox">
@@ -117,11 +116,9 @@
   <footer class="footer">
     <div class="footer__logo-social-wrapper">
       <div class="footer__logo">
-        <svg width="52" height="52">
-          <use xlink:href="img/sprite.svg#icon_logo"></use>
+        <svg width="216" height="52">
+          <use xlink:href="img/sprite.svg#icon_logo_footer"></use>
         </svg>
-        <h3>Service Device</h3>
-        <p>умные технологии</p>
       </div>
       <p class="footer__company">1999-2018 SD Service Devices</p>
       <section class="social">
@@ -228,7 +225,7 @@
         <input type="tel" name="user-phone" id="phone-popup" placeholder="Телефон" value="" class="phone" required>
       </label>
       <label for="question-popup">
-        <textarea placeholder="Ваш вопрос" id="question-popup"></textarea>
+        <textarea placeholder="Ваш вопрос" id="question-popup" name="user-question"></textarea>
       </label>
       <button type="submit" class="button popup__btn">Отправить</button>
       <div class="popup__checkbox">
