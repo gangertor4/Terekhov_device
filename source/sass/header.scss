@@ -15,29 +15,53 @@
   @media (max-width: $tablet-width) {
     padding-top: 21px;
 
-    background-size: cover, 465px, 515px;
-    background-position: 0 0, 510px 113px, 175% -35px;
+    background-size: cover;
+    background-position: 0 0;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 17px;
 
-    background-size: cover, 301px, 480px;
-    background-position: 0 0, 26px 92px, 150px -40px;
+    background-size: cover;
+    background-position: 0 0;
   }
 }
 
 .header__wrapper {
-  max-width: 1411px;
+  max-width: 1920px;
   margin: 0 auto;
   background-image: url("../img/main_circuit.png"), url("../img/main_triangulars.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: 112% 225px, 82.5% 118px;
+  background-position: 85% 225px, 82.5% 118px;
   background-size: 705px, 670px;
 
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
     background-image: url("../img/main_circuit@2x.png"), url("../img/main_triangulars@2x.png");
     background-size: 705px, 670px;
+  }
+
+  @media (max-width: 1570px) {
+    background-position: 750px 225px, 750px 118px;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-size: 465px, 515px;
+    background-position: 510px 113px, 175% -35px;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-size: 465px, 515px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-size: 301px, 480px;
+    background-position: calc(50% + 15px) 75px, calc(50% + 235px) -56px;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-size: 301px, 480px;
+    }
   }
 }

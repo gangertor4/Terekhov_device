@@ -1,5 +1,7 @@
 .benefits {
   margin-top: 109px;
+  padding-left: 30px;
+  padding-right: 30px;
 
   @media (max-width: $tablet-width) {
     margin-top: 59px;
@@ -34,6 +36,7 @@
 }
 
 .benefits__card {
+  max-width: 570px;
   min-height: 299px;
   padding-top: 98px;
   padding-left: 45px;

@@ -11,8 +11,8 @@
   @media (max-width: $mobile-width) {
     padding-right: 0;
     padding-left: 0;
-    margin-top: 28px;
-    margin-bottom: 23px;
+    margin-top: 0;
+    margin-bottom: 0;
     width: 100%;
     position: relative;
   }
@@ -23,6 +23,8 @@
 
   @media (max-width: $mobile-width) {
     margin-left: 15px;
+    padding-top: 29px;
+    padding-bottom: 28px;
   }
 }
 
@@ -36,6 +38,7 @@
     margin: 0 auto;
     margin-top: 30px;
     padding-right: 42px;
+    padding-bottom: 23px;
   }
 }
 

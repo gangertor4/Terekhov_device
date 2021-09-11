@@ -8,6 +8,10 @@
   background-position: -3.5% 0;
   background-size: 220px;
 
+  @media (max-width: 1186px) {
+    background-position: 0 0;
+  }
+
   @media (max-width: $tablet-width) {
     max-width: 720px;
     margin-top: 59px;

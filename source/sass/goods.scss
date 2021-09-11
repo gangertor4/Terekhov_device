@@ -35,17 +35,20 @@
 }
 
 .goods__list {
-  max-width: fit-content;
+  max-width: 1170px;
   margin: 0 auto;
   list-style: none;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 370px);
+  grid-template-rows: repeat(auto, auto);
   gap: 30px;
-  flex-wrap: wrap;
   padding-left: 30px;
   padding-right: 30px;
 
   @media (max-width: $tablet-width) {
+    display: flex;
+    max-width: fit-content;
     flex-direction: column;
     padding: 0;
     gap: 46px;
@@ -75,9 +78,9 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 290px;
+    width: calc(100vw - 30px);
     height: 256px;
-    background-size: 290px;
+    background-size: cover;
     padding-top: 23px;
     padding-left: 35px;
   }
